@@ -1,1 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #121212;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navleft{
+    display: flex;
+    align-items: center;
+}
 
+#navright{
+    display: flex;
+    align-items: center;
+}
+#title{
+    font-weight: bold;
+    margin: 25px;
+    font-size: 40px;
+    color: #696969;
+}
+body{
+    background-color: #696969;
+    background-image: url(images/rengoku-and-tengen-uzui.jpg);
+    background-size: cover;
+    opacity: 1;
+    filter: brightness(100%);
+}
+.items{
+    padding: 10px;
+    color:#696969 ;
+    font-size: 20px;
+}
+#middle{
+  width: 700px;
+  height: 500px;
+  background-image: url(images/Anime_DemonSlayer_Muzan_3.webp) ;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  filter: brightness(70%);
+  
+}
+#container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.text{
+    text-align: center;
+    line-height: 25px;
+    font-size: 22px;
+    margin: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 
+    0 0 25px white;  
+}
+.browse {
+        display: inline-block; /* Ensures it behaves like a button */
+        margin-top: 20px; /* Space between the paragraph and button */
+        padding: 10px 20px; /* Padding for the button */
+        font-size: 18px; /* Font size for the button text */
+        text-decoration: none; /* Remove underline from the link */
+        color: #fff; /* Button text color */
+        background-color: #FF4500; /* Button background color */
+        border-radius: 5px; /* Rounded corners */
+        text-align: center; /* Center-align text inside the button */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+        transition: all 0.3s ease; /* Smooth hover effect */
+}
+.browse:hover {
+    background-color: #FF6347; /* Slightly lighter color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+    
