@@ -33,6 +33,7 @@ body{
     background-image: url(images/rengoku-and-tengen-uzui.jpg);
     background-size: cover;
     opacity: 1;
+    filter: brightness(100%);
 }
 .items{
     padding: 10px;
@@ -52,6 +53,7 @@ body{
   flex-direction: column;
   justify-content: center;
   opacity: 1;
+  filter: brightness(70%);
   
 }
 #container{
