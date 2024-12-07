@@ -1,3 +1,25 @@
+@font-face {
+    font-family: 'Chainsaw'; /* Name of the font */
+    src: url('Fonts/font-to-a-chainsaw/FontToAChainsaw.otf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Monarcha'; /* Name of the font */
+    src: url('Fonts/Monarcha/Monarcha\ Regular.ttf') format('opentype'); /* Path to the font file */
+    
+}
+@font-face {
+    font-family: 'Hollow-Fate'; /* Name of the font */
+    src: url('Fonts/HollowFont/ChalklineOutline-AjZM.otf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Cabazon'; /* Name of the font */
+    src: url('Fonts/Cabazon/Cabazon.ttf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Dutch'; /* Name of the font */
+    src: url('Fonts/1756Dutch/1756Dutch.ttf') format('opentype'); /* Path to the font file */
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -73,12 +95,19 @@
 }
 
 .carousel-caption {
-    position: absolute;
-    bottom: 20%;
+    margin:0;
+    bottom: 30%;
+    right:70%;
     z-index: 2; 
-    text-align: center;
     color: white;
+    width:350px;
+    text-align: left;
 }
+.carousel-caption>h2,a{
+    text-align: center;
+    
+}
+
 
 /* Slide fade Effect */
 .carousel-item {
@@ -90,3 +119,14 @@
     opacity: 1; /* Fade in when active */
 }
 
+
+.glowing-line {
+    margin: 10px auto; /* Adds space above and below the line */
+    width: 80%; /* Adjust width */
+    height:2px;
+    background-color: white;
+    box-shadow: 0 0 3px rgb(3, 251, 222);
+    border-radius: 2px;
+    
+}
+    
