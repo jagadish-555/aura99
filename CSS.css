@@ -14,8 +14,10 @@
     justify-content: space-between;
 }
 #navleft{
-    display: flex;
-    align-items: center;
+    background-image: url(images/AURA.png);
+    background-size: cover;
+    height: 35px;
+    width: 150px;
 }
 
 #navright{
@@ -37,7 +39,7 @@ body{
 }
 .items{
     padding: 10px;
-    color:#696969 ;
+    color:#fafafa ;
     font-size: 20px;
 }
 #middle{
