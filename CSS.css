@@ -34,7 +34,7 @@
 }
 body{
     background-color: #696969;
-    background-image: url(images/rengoku-and-tengen-uzui.jpg);
+    background-image: url(images/anime-night-sky-illustration.jpg);
     background-size: cover;
     opacity: 1;
     filter: brightness(100%);
@@ -47,17 +47,17 @@ body{
 #middle{
   width: 700px;
   height: 500px;
-  background-image: url(images/Anime_DemonSlayer_Muzan_3.webp) ;
+  /* background-image: url(images/both.jpg) ; */
   background-size: cover;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  color: #fff;
+  box-shadow: 0 0px 8px black;
+  color: white;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 1;
-  filter: brightness(70%);
+  opacity: 100%;
+  filter: brightness(100%);
   
 }
 #container{
@@ -72,8 +72,9 @@ body{
     margin: 30px;
     color: white;
     font-weight: bold;
-    text-shadow: 
-    0 0 25px white;  
+    /* text-shadow: 
+    0 0 25px white;   */
+    
 }
 .browse {
         display: inline-block; /* Ensures it behaves like a button */
@@ -82,11 +83,12 @@ body{
         font-size: 18px; /* Font size for the button text */
         text-decoration: none; /* Remove underline from the link */
         color: #fff; /* Button text color */
-        background-color: #FF4500; /* Button background color */
+        background: linear-gradient(145deg,rgb(7, 7, 97),rgb(13, 11, 11)); /* Button background color */
         border-radius: 5px; /* Rounded corners */
         text-align: center; /* Center-align text inside the button */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
         transition: all 0.3s ease; /* Smooth hover effect */
+        border: 1px solid white;
 }
 .browse:hover {
     background-color: #FF6347; /* Slightly lighter color on hover */
