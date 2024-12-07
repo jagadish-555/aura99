@@ -139,3 +139,6 @@
     text-shadow: 0 0 3px black;
     font-size:18px;
 }
+#watch{
+    background:linear-gradient(145deg,rgb(4, 4, 4),rgb(7, 7, 77));
+}
