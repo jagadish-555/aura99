@@ -14,16 +14,18 @@
     justify-content: space-between;
 }
 #navleft{
-    background-image: url(images/AURA.png);
-    background-size: cover;
-    height: 35px;
-    width: 150px;
+
+    display: flex;
+    align-items: center;
+
 }
 
 #navright{
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
+
 #title{
     font-weight: bold;
     margin: 25px;
@@ -39,8 +41,8 @@ body{
 }
 .items{
     padding: 10px;
-    color:#fafafa ;
-    font-size: 20px;
+    color:#696969 ;
+    font-size: 25px;
 }
 #middle{
   width: 700px;
