@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logging out...</h1>
+    <script>
+        // Clear the login state from localStorage
+        localStorage.removeItem('loggedIn');
+
+        // Redirect to login page after logout
+        setTimeout(function() {
+            window.location.href = 'login.html';  // Redirect to login page
+        }, 1000);  // Delay to show the message
+    </script>
+</body>
+</html>

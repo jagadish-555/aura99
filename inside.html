@@ -19,13 +19,13 @@
             <div class="items">Categories</div>
             <div class="items">Popular</div>
             <div class="items">Trending</div>
-            <a class="items" href="login.html" style="text-decoration: none;">Log In</a>
+            <!-- Login Button that will change if the user is logged in -->
+            <a id="loginStatus" class="items" href="login.html" style="text-decoration: none;">Log In</a>
         </div>
     </div>
 
     <!-- Slideshow -->
     <div id="fullPageCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-        <!-- Indicators -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -34,7 +34,6 @@
             <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
 
-        <!-- Slides -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/Frieren1.jpg" alt="Slide 1">
@@ -83,16 +82,24 @@
 
         </div>
 
-        <!-- Navigation Controls -->
+
         <button class="carousel-control-prev" type="button" data-bs-target="#fullPageCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#fullPageCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
         </button>
     </div>
 
+    <script>
+        // Check if the user is logged in by looking at localStorage
+        if (localStorage.getItem('loggedIn') === 'true') {
+            // Change the login button to 'Logged In'
+            document.getElementById('loginStatus').innerText = 'Log Out';
+            // Change the link to a logout page or other page
+            document.getElementById('loginStatus').href = 'logout.html';  // Redirect to logout page
+        }
+    </script>
+
 </body>
-</html> 
+</html>
