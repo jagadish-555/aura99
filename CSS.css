@@ -11,7 +11,7 @@
     margin-top: 0px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 #navleft{
 
@@ -93,3 +93,6 @@ body{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
 }
     
+img{
+    height: 60px;
+}
