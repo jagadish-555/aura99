@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#particles-js{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(145deg, #051145, #060b14, #02173c);
+}
+#middle{
+    position: absolute;
+    top: 21%;
+    left: 27%;
+    width: 700px;
+  height: 500px;
+  background: linear-gradient(145deg, #ffffff, #dfe9f3, #b0c4de);
+  background-image: url(images/wp10114525.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  filter: brightness(100%);
+  
+}
+#log{
+    color: white;
+    position: absolute;
+    top: 13%;
+    left: 47%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 35%;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 22px;
+    padding: 8px 0;
+    color: #333;
+    background: transparent;
+}
+
+input:focus {
+    border-bottom: 2px solid #3e4248;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: large;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #007BFF;
+}
+
+.underline {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #4d4e50;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+input:focus ~ .underline {
+    transform: scaleX(1);
+    
+}
+
+button{
+    background: #171717;
+    color: #fff;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+}
+
+button:hover {
+    background: #494b4d;
+}
+#form{
+    
+    background: white;
+    height:400px;
+    width:500px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    gap: 10px;
+}

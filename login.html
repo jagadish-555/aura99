@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="particles-js">
+        <h1 id="log">Log In</h1>
+        <div id="middle">
+            <div id="form">
+            <h3 style="top: 10%;position: absolute;color: black;">Think about any genere of anime.<br>They’re all here!</h3>
+            <p></p>
+            <p></p>
+            <form>
+                <div class="input-container">
+                    <input type="text" id="email-phone" required>
+                    <label for="email-phone" style="font-size: large; color: black; font-weight: bold;">Email or Phone</label>
+                    <span class="underline"></span>
+                </div>
+                <p></p>
+                <p></p>
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <label for="password" style="font-size: large; color: black; font-weight: bold;">Password</label>
+                    <span class="underline"></span>
+                </div>
+                <button id="myButton" type="submit">Login</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            window.location.href = "inside.html";
+        });
+    </script>
+    
+</body>
+</html>
