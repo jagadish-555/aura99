@@ -141,3 +141,6 @@
 #watch{
     background:linear-gradient(145deg,rgb(4, 4, 4),rgb(7, 7, 77));
 }
+.remove{
+    text-decoration: none;
+}
