@@ -515,4 +515,20 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+#title1 {
+    scroll-margin-top: 200px;
+}
+#title2 {
+    scroll-margin-top: 200px;
+}
 
+#navright .items a, #navright a{
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from parent element */
+    transition: transform 0.3s ease,
+}
+
+#navright .items:hover {
+    color: lightgray; /* Optional: Add hover effect */
+    transform: scale(1.1)
+}
