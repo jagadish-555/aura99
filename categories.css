@@ -1,0 +1,52 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    min-height: 100%;  /* Ensure that the body takes at least the full height of the screen */
+    background:black;
+    background-size:cover;  /* Ensures the background covers the entire screen */
+    background-position: center; /* Ensures the background is centered */
+    background-attachment: fixed; 
+
+}
+.container{
+    position: absolute;
+    top: 25%;
+    margin-left: 7%;
+    margin-right: 7%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: repeat(3,1fr);
+    color: white;
+    gap: 150px;
+}
+.card{
+    width: 270px;
+    height: 400px;
+    background: white;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+
+}
+h3{
+    color: black;
+}
+.text{
+    font-size: 28px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.text:hover{
+    transform: scale(1.1)
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+span{
+    margin: 25%;
+}
