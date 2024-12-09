@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+}
+
+.list {
+    height: 280px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    background-color: transparent;
+}
+
+.item {
+    height: 280px;
+    width: 9%;
+    background-color: transparent;
+    overflow: hidden; /* Ensures the image doesn’t leak out of the box */
+    position: relative; /* Ensures proper stacking context for child elements */
+}
+
+.item img {
+    height: 100%; /* Makes the image fill the height of the .item */
+    width: 100%; /* Makes the image fill the width of the .item */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+    display: block; /* Prevents inline spacing below the image */
+}
+
+.list {
+    transform-style: preserve-3d;
+    transform:perspective(1000px)
+}
+
+.list .item {
+    transition: 0.5s;
+    filter: brightness(0);
+}
+
+.list .item:hover {
+    filter: brightness(1);
+    transform:translateZ(200px)
+}
+
+.list .item:hover + * {
+    filter:brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg)
+}
+.list .item:hover + * + * {
+    filter:brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg)
+}
+.list .item:hover + * + * + *{
+    filter:brightness(0.2);
+    transform: translateZ(30px) rotateY(10deg)
+}
+
+.list .item:has(+ *:hover) {
+    filter:brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg)
+}
+.list .item:has(+ * + *:hover){
+    filter:brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg)
+}
+.list .item:has(+ * + * + *:hover){
+    filter:brightness(0.2);
+    transform: translateZ(30px) rotateY(-10deg)
+}
+
+

@@ -3,23 +3,26 @@
     src: url('Fonts/font-to-a-chainsaw/FontToAChainsaw.otf') format('opentype'); /* Path to the font file */
 }
 @font-face {
-    font-family: 'Monarcha'; /* Name of the font */
-    src: url('Fonts/Monarcha/Monarcha\ Regular.ttf') format('opentype'); /* Path to the font file */
+    font-family: 'Monarcha';
+    src: url('Fonts/Monarcha/Monarcha\ Regular.ttf') format('opentype');
     
 }
 @font-face {
-    font-family: 'Hollow-Fate'; /* Name of the font */
-    src: url('Fonts/HollowFont/ChalklineOutline-AjZM.otf') format('opentype'); /* Path to the font file */
+    font-family: 'Hollow-Fate';
+    src: url('Fonts/HollowFont/ChalklineOutline-AjZM.otf') format('opentype');
 }
 @font-face {
-    font-family: 'Cabazon'; /* Name of the font */
-    src: url('Fonts/Cabazon/Cabazon.ttf') format('opentype'); /* Path to the font file */
+    font-family: 'Cabazon';
+    src: url('Fonts/Cabazon/Cabazon.ttf') format('opentype');
 }
 @font-face {
-    font-family: 'Dutch'; /* Name of the font */
-    src: url('Fonts/1756Dutch/1756Dutch.ttf') format('opentype'); /* Path to the font file */
+    font-family: 'Dutch';
+    src: url('Fonts/1756Dutch/1756Dutch.ttf') format('opentype');
 }
-
+@font-face {
+    font-family: 'Avatar';
+    src: url('Fonts/Avatar_Water.ttf') format('opentype');
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -57,88 +60,446 @@
 
 #title {
     color: white;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 34px;
+    
     margin-left: 15px;
+    font-family: Avatar;
 }
 
+
 /* Carousel Background Image Merge */
-.carousel, .carousel-inner, .carousel-item, .carousel-item img {
+#fullPageCarousel .carousel, .carousel-inner, .carousel-item, .carousel-item img {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: calc(100vh - 60px); 
+    height: 850px; 
 }
 
-.carousel-item img {
+#fullPageCarousel .carousel-item img {
     object-fit: cover;
 }
-.carousel-item img {
+#fullPageCarousel .carousel-item img {
     width: 100%;
-    height: 100vh; 
+    height: 850px; 
     object-fit: cover; 
 }
 
-.carousel-item {
+#fullPageCarousel .carousel-item {
     position: relative;
 }
 
-.carousel-item::after {
+#fullPageCarousel .carousel-item::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, black 100%);
     z-index: 1; /* Ensures the gradient overlay appears above the image */
 }
 
-.carousel-caption {
+#fullPageCarousel .carousel-caption {
     margin:0;
-    bottom: 15%;
-    right:70%;
+    margin-left: -70px;
+    bottom: 25%;
+    right:80%;
     z-index: 2; 
     color: white;
     width:350px;
     text-align: left;
 }
-.carousel-caption>h2,a{
+#fullPageCarousel .carousel-caption>h2,a{
     text-align: center;
+}
 
+#fullPageCarousel .carousel-control-prev,
+#fullPageCarousel .carousel-control-next {
+    width:110px;
 }
 
 
 /* Slide fade Effect */
-.carousel-item {
+#fullPageCarousel .carousel-item {
     opacity: 0; /* Start invisible */
     transition: opacity 2s ease-in-out; /* Smooth transition for fade */
 }
 
-.carousel-item.active {
+#fullPageCarousel .carousel-item.active {
     opacity: 1; /* Fade in when active */
 }
 
 
 .glowing-line {
     margin: 10px auto; /* Adds space above and below the line */
-    width: 80%; /* Adjust width */
+    width: 80%;
     height:2px;
     background-color: white;
     box-shadow: 0 0 3px rgb(3, 251, 222);
     border-radius: 2px;
     
 }
-.btn{
-    background-color: rgb(195, 72, 0);
-    background-size: cover;
-    padding:5px;
-    border:5px solid black;
-}
-.carousel-caption p{
+#fullPageCarousel .carousel-caption p{
     text-shadow: 0 0 3px black;
     font-size:18px;
 }
 #watch{
     background:linear-gradient(145deg,rgb(4, 4, 4),rgb(7, 7, 77));
+}
+
+
+#fullPageCarousel .carousel-indicators {
+    bottom:20%;
+    right:60%;
+    width:200px;
+}
+
+/* Content Section */
+
+.title {
+    font-family: helvetica;
+    font-size: 28px;
+    height:36;
+    width:90%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 66px;
+    color:white;
+    font-family:fantasy;
+}
+.a1 {
+    position:absolute;
+    margin-top: -110px;
+    z-index: 2;
+}
+#content {
+    position: relative; /* Keeps it within the normal flow */
+    margin-top: -40px; /* Overlaps the content with the Background Image */
+    z-index: 2; /* Ensures it appears above the carousel images */
+}
+#content .carousel,
+#content .carousel-inner,
+#content .carousel-item {
+    margin:0;
+    padding:0;
+    height: 400px; /*fixed height for the carousel */
+    overflow: hidden;
+    z-index: 4;
+    margin-left: 25px;
+}
+
+#content .carousel-item {
+    position:relative;
+}
+
+.box {
+    width: 16.5%;
+    height: 400px; /*I've set the height to 400 as per my preference -Note*/
+    display: inline-block; /*Don't know why display:flex isn't working. -Note*/
+    margin: 0 15px;
+    position: relative; /* Ensures stacking context for overlap */
+    z-index: 3;
+    background-color: transparent;
+}
+#content .carousel-control-prev,
+#content .carousel-control-next {
+    position: absolute;
+    z-index: 5;
+    width:80px;
+}
+
+#content .carousel-item {
+    opacity: 0.5; /* Start invisible -Note*/
+    transition: opacity 0.2s ease-in-out; /* Smooth transition for fade -Note*/
+}
+
+#content .carousel-item.active {
+    opacity: 1; /* Fade in when active */
+}
+#content .carousel-control-next {
+    width:60px
+}
+.poster {
+    width:100%;
+    height:87%;
+}
+.poster img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position: relative;
+
+}
+.info {
+    width:100%;
+    height:20%;
+    background-color: black;
+    padding-top:10px;
+
+}
+.info h6 {
+    color:rgb(238, 238, 238);
+    font-size: 14px;
+}
+.info p{
+    color: gray;
+    font-size: 14px;
+}
+.promo {
+    margin-top: 40px;
+    margin-left: 116px;
+    width:85%;
+    height: 450px;
+}
+.promo img {
+    margin-top: 40px;
+    height:100%;
+    width:100%;
+    background-position: 30% 50%;
+    
+}
+
+/* Content1 */
+
+.title1 {
+    font-family: helvetica;
+    font-size: 28px;
+    height:36px;
+    width:90%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 66px;
+    margin-top: 40px;
+    padding-top: 40px;
+    color:white;
+    font-family:fantasy;
+}
+
+#content1 {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 30px;
+    z-index: 2;
+}
+#content1 .carousel,
+#content1 .carousel-inner,
+#content1 .carousel-item {
+    margin:0;
+    padding:0;
+    height: 400px; /* Set a fixed height for the carousel */
+    overflow: hidden;
+    z-index: 4;
+    margin-left: 25px;
+}
+
+#content1 .carousel-item {
+    position:relative;
+}
+
+.box {
+    width: 16.5%;
+    height: 400px;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative; /* Ensures stacking context for overlap */
+    z-index: 3;
+    background-color: transparent;
+}
+#content1 .carousel-control-prev,
+#content1 .carousel-control-next {
+    position: absolute;
+    z-index: 5;
+    width:80px;
+}
+
+#content1 .carousel-item {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out; /* Smooth transition for fade */
+}
+
+#content1 .carousel-item.active {
+    opacity: 1; /* Fade in when active */
+}
+#content1 .carousel-control-next {
+    width:60px
+}
+.poster {
+    width:100%;
+    height:87%;
+}
+.poster img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position: relative;
+
+}
+.info {
+    width:100%;
+    height:20%;
+    background-color: black;
+    padding-top:10px;
+
+}
+.info h6 {
+    color:rgb(238, 238, 238);
+    font-size: 14px;
+}
+.info p{
+    color: gray;
+    font-size: 14px;
+}
+.promo {
+    margin-top: 30px;
+    margin-left: 116px;
+    width:85%;
+    height: 450px;
+}
+
+
+#content2 {
+    position: relative;
+    margin-top: 30px;
+    padding-top: 30px;
+    z-index: 2;
+}
+#content2 .carousel,
+#content2 .carousel-inner,
+#content2 .carousel-item {
+    margin:0;
+    padding:0;
+    height: 400px; /* Set a fixed height for the carousel, */
+    overflow: hidden;
+    z-index: 4;
+    margin-left: 25px;
+}
+
+#content2 .carousel-item {
+    position:relative;
+}
+#content2 .carousel-control-prev,
+#content2 .carousel-control-next {
+    position: absolute;
+    z-index: 5; /* Higher than boxes and other elements */
+    width:80px;
+}
+
+#content2 .carousel-item {
+    opacity: 0.5; /* Start invisible */
+    transition: opacity 0.2s ease-in-out; /* Smooth transition for fade */
+}
+
+#content2 .carousel-item.active {
+    opacity: 1; /* Fade in when active */
+}
+#content2 .carousel-control-next {
+    width:60px
+}
+
+/* Surprise */
+
+
+.list {
+    margin-top: 70px;
+    height: 280px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    background-color: transparent;
+}
+
+.cont {
+    height: 280px;
+    width: 12.5%;
+    background-color: transparent;
+    overflow: hidden; /* Ensures the image doesn’t leak out of the box */
+    position: relative; /* Ensures proper stacking context for child elements */
+}
+
+.cont img {
+    height: 100%; /* Makes the image fill the height of the .item */
+    width: 100%; /* Makes the image fill the width of the .item */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+    display: block; /* Prevents inline spacing below the image */
+}
+
+.list {
+    transform-style: preserve-3d;
+    transform:perspective(1000px)
+}
+
+.list .cont {
+    transition: 0.5s;
+    filter: brightness(0);
+}
+
+.list .cont:hover {
+    filter: brightness(1);
+    transform:translateZ(200px)
+}
+
+.list .cont:hover + * {
+    filter:brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg)
+}
+.list .cont:hover + * + * {
+    filter:brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg)
+}
+.list .cont:hover + * + * + *{
+    filter:brightness(0.2);
+    transform: translateZ(30px) rotateY(10deg)
+}
+
+.list .cont:has(+ *:hover) {
+    filter:brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg)
+}
+.list .cont:has(+ * + *:hover){
+    filter:brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg)
+}
+.list .cont:has(+ * + * + *:hover){
+    filter:brightness(0.2);
+    transform: translateZ(30px) rotateY(-10deg)
+}
+
+.footer {
+    margin-top: 50px;
+    height: 350px;
+    width: 100%;
+    background-color: #1f353f;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #25414f 100%);
+    position: relative; /* Prevents overlap issues */
+}
+
+.inside_footer {
+    padding-top: 10px;
+    color: white;
+    background-color: transparent;
+    width: 80%;
+    margin-left: 10%;
+    height: 75%;
+    position: absolute;
+}
+
+.inside-footer2 {
+    height: 25%;
+    width: 80%;
+    background-color: transparent;
+    margin-left: 10%;
+    position: absolute;
+    bottom: 0; /* Ensures the HR is at the bottom of the footer */
+    color: white;
+    
+}
+
+.inside-footer2 hr {
+    align-items: top;
+    border: 1px solid white; /* Makes the HR line visible */
+    margin: 0; /* Removes default margin */
+    width: 100%; /* Ensures the HR spans the full width */
 }
