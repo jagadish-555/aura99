@@ -415,13 +415,13 @@
     height: 280px;
     width: 12.5%;
     background-color: transparent;
-    overflow: hidden; /* Ensures the image doesn’t leak out of the box */
-    position: relative; /* Ensures proper stacking context for child elements */
+    overflow: hidden;
+    position: relative;
 }
 
 .cont img {
-    height: 100%; /* Makes the image fill the height of the .item */
-    width: 100%; /* Makes the image fill the width of the .item */
+    height: 100%;
+    width: 100%;
     object-fit: cover; /* Ensures the image covers the box without distortion */
     display: block; /* Prevents inline spacing below the image */
 }
@@ -499,7 +499,20 @@
 
 .inside-footer2 hr {
     align-items: top;
-    border: 1px solid white; /* Makes the HR line visible */
-    margin: 0; /* Removes default margin */
-    width: 100%; /* Ensures the HR spans the full width */
+    border: 1px solid white;
+    margin: 0;
+    width: 100%;
 }
+
+.carousel-inner .carousel-item .box img:hover {
+    transform: scale(1.1); /* Zoom in the card */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    
+    
+}
+
+.carousel-inner .carousel-item .box img{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
