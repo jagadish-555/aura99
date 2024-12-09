@@ -1,35 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="CSS.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA ANIME</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1/tilt.jquery.min.js"></script>
+    <title>AURA Anime</title>
+    <link rel="stylesheet" href="inside.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    
 </head>
-<body>
+<body style="background-color: black;">
+
+    <!-- Navbar -->
     <div id="navbar">
-        <!-- <img src="images/AURA.png" alt="aura logo"> -->
-        <!--  <div id="navleft">
-            <div id="title">AURA  ANIME</div> -->
-        <!-- </div>
+        <div id="navleft">
+            <div id="title">Aura Anime</div>
+        </div>
         <div id="navright">
-            <div class="items">Login</div>
-        </div>  --> 
-    </div>
-    <div id="container">
-        <div id="middle" data-tilt>
-            <p class="text">Are you ready to dive into a world where every twist, turn, and epic battle feels just right? At Aura Anime, we’re here to help you discover your next favorite anime – whether you're a seasoned otaku or just starting your anime journey.
-                Our hand-picked recommendations cater to every taste – from heart-pounding action to tear-jerking drama, and from heartwarming romances to mind-bending sci-fi. We believe that every anime should feel like it was made just for you, and we’re passionate about finding those perfect matches that will light up your screen.
-                So, what are you waiting for? Let Aura Anime be your guide to discovering the best anime series and films, carefully curated just for your vibe.
-            </p>
-            <a class="browse" href="inside.html">BROWSE</a>
+            <a href="categories.html" class="remove"><div class="items">Categories</div></a>
+            <div class="items"><a href="#title1">Trending</a></div>
+            <div class="items"><a href="#title2">Popular</a></div>
+            <!-- Login Button that will change if the user is logged in -->
+            <a id="loginStatus" class="items" href="login.html" style="text-decoration: none; color:white ">Log In</a>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="tilt.jquery.js"></script>
+
+    <!-- Slideshow -->
+    <div id="fullPageCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#fullPageCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/Frieren1.jpg" alt="Slide 1">
+                <div class="carousel-caption">
+                    <h2 style = "font-family:Dutch ;font-size: 65px; color: rgb(255, 255, 255);height:75px;text-shadow: 0 0 5px rgb(3, 251, 222);">F R I E R E N</h2>
+
+                    <div class="glowing-line"></div>
+                    
+                    <h2 style="font-family:Dutch ;font-size: 45pxpx; color: rgb(255, 255, 255);text-shadow: 0 0 3px rgb(3, 251, 222);">Beyond the journey's end.</h2>
+                <p>Taking place in a fantasy world, the story follows Frieren, an elven mage, as she embarks on a journey to reach the resting place of souls in order to reunite with her former comrade Himmel, whose Hero Party once slew the Demon King.</p>
+                <a href="templates anime/frienrin.html" id="watch" class="btn btn-primary">Watch Now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/suzume-no-tojimari-3840x2160-11464.jpg" alt="Slide 2">
+                <div class="carousel-caption">
+                    <h2 style = "font-family: Monarcha;font-size: 80px;color:azure;text-shadow: 1px 1px 1px  #dff6ff;">Suzume</h2>
+                <p>A modern action adventure road story where a 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over in Japan.</p>
+                <a href="templates anime/suzume.html" id="watch" class="btn btn-primary">Watch Now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/Fate Zero.png" alt="Slide 3">
+                <div class="carousel-caption">
+                    <h2 style = "font-family: Hollow-Fate;font-size: 65px;color: whitesmoke;">Fate Zero</h2>
+                <p>Seven chosen mages and their summoned heroic spirits fight against each other to try and win the Holy Grail: a magical device that can grant any wish.</p>
+                <a href="templates anime/fate.html" id="watch" class="btn btn-primary">Watch Now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/Chainsaw Man.png" alt="Slide 4">
+                <div class="carousel-caption">
+                    <h2 style = "font-family: Chainsaw;font-size: 75px; color:rgb(34, 33, 33);">Chainsaw <span>--</span>Man</h2>
+                <p>Following a betrayal, a young man left for dead is reborn as a powerful devil-human hybrid after merging with his pet devil and is soon enlisted into an organization dedicated to hunting devils.</p>
+                <a href="templates anime/chainsaw man.html" id="watch" class="btn btn-primary">Watch Now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/mashle-anime-character-4k-wallpaper-uhdpaper.com-353@0@j.jpg" alt="Slide 5">
+                <div class="carousel-caption">
+                    <h2 style = "font-family: Cabazon; font-size: 75px;color: rgb(117, 5, 5);-webkit-text-stroke: 2px white;text-align: center;"><span style = "font-size: 45px;font-weight: bold;">マッシュル</span> MASHLE</h2>
+                <p>Into a world of magicians is born Mash, a young boy who lacks magic but is the strongest person around. His existence and destiny will change his world.</p>
+                <a href="templates anime/mashle-magic-and-muscle.html" id="watch" class="btn btn-primary">Watch Now</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#fullPageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#fullPageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+    <!-- Content Section -->
+    <div id = "title1"class="title a1">Monthly Trending</div>
+   
+        <div id = "content" class="carousel slide carousel-fade"  data-bs-wrap="true" data-bs-interval="1000">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="box">
+                        <a href="templates anime/black clover.html">
+                        <div class="poster">
+                            <img src="Posters/Black Clover.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Black Clover</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/fairy tail.html">
+                        <div class="poster">
+                            <img src="Posters/FairyTailPoster_anime.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Fairy Tail</h6>
+                            <p>Subtitled</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/negative-positive-angler.html">
+                        <div class="poster">
+                            <img src="Posters/Negative positive angler.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Negative Positive Angler</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/frienrin.html">
+                        <div class="poster">
+                            <img src="Posters/Frieren.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Frieren</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/chainsaw man.html">
+                        <div class="poster">
+                            <img src="Posters/Chainsaw Man.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Chainsaw man</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="box">
+                        <a href="templates anime/365-daystowedding.html">
+                        <div class="poster">
+                            <img src="Posters/365 Days to wedding.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>365 Days to Wedding</h6>
+                            <p>Subtitled</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/haikyu.html">
+                        <div class="poster">
+                            <img src="Posters/Haikyu.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Haikyu</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/solo leveling.html">
+                        <div class="poster">
+                            <img src="Posters/Solo Leaveling.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Solo Leaveling</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/A Galaxy Next Door.html">
+                        <div class="poster">
+                            <img src="Posters/A galaxy next door.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>A Galaxy Next Door</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/blue lock .html">
+                        <div class="poster">
+                            <img src="Posters/Blue Lock.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Blue Lock</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#content" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#content" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="promo">
+            <img src="Posters/TheOssanNewbieAdventurer_EN_Banner_Standard_Desktop_2100x700.avif" alt="">
+        </div>
+        <div id = "title2" class="title1">
+            Top Picks For you
+        </div>
+   
+        <div id = "content1" class="carousel slide carousel-fade"  data-bs-wrap="true" data-bs-interval="1000">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="box">
+                        <a href="templates anime/demonslayer.html">
+                        <div class="poster">
+                            <img src="Posters/Deamon Slayer.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Deamon Slayer</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/blue-exorcist.html">
+                        <div class="poster">
+                            <img src="Posters/Blue Exorcist.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Blue Exorcist</h6>
+                            <p>Subtitled</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/jujutsukaisen.html">
+                        <div class="poster">
+                            <img src="Posters/Jujitsu Kaisen.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Jujitsu Kaisen</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/spice-and-wolf.html">
+                        <div class="poster">
+                            <img src="Posters/Spice and Wolf.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Spice and Wolf</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/vinland saga.html">
+                        <div class="poster">
+                            <img src="Posters/Vinland Saga.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Vinland Saga</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="box">
+                        <a href="templates anime/tengoku-daimkyogu.html">
+                        <div class="poster">
+                            <img src="Posters/Tengoku Daimakyo.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Tengoku Daimakyo</h6>
+                            <p>Subtitled</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/moshkutensi.html">
+                        <div class="poster">
+                            <img src="Posters/Mushoku Tensei 2.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Mushoku Tensei 2</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/eighty-six.html">
+                        <div class="poster">
+                            <img src="Posters/86.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Eighty Six</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/attack on titans.html">
+                        <div class="poster">
+                            <img src="Posters/AOT.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Attack on Titan/h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/steins-gate.html">
+                        <div class="poster">
+                            <img src="Posters/Steins Gate.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Steins Gate</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#content1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#content1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="title1">
+            Must Watch Movies
+        </div>
+   
+        <div id = "content2" class="carousel slide carousel-fade"  data-bs-wrap="true" data-bs-interval="1000">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="box">
+                        <a href="templates anime/a silent voice.html">
+                        <div class="poster">
+                            <img src="Posters/A Silent Voice.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>A Silent Voice</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/flavours-of-youth.html">
+                        <div class="poster">
+                            <img src="Posters/Flavors of Youth.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Flavors of Youth</h6>
+                            <p>Subtitled</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/the-grave-of-the-fireflies.html">
+                        <div class="poster">
+                            <img src="Posters/Grave of the Fireflies.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Grave of Fireflies</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/tunnel-to-summer.html">
+                        <div class="poster">
+                            <img src="Posters/Tunnel to summer.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Tunnel to Summer</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/spirited-away.html">
+                        <div class="poster">
+                            <img src="Posters/Spirited Away.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Spirited Away</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="box">
+                        <a href="templates anime/violet-evergarden.html">
+                        <div class="poster">
+                            <img src="Posters/Violet Evergarden.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Violet Evergarden</h6>
+                            <p>Subtitled</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/weathering-with-you.html">
+                        <div class="poster">
+                            <img src="Posters/Weathering with you.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Weathering With You</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/your-name.html">
+                        <div class="poster">
+                            <img src="Posters/Your Name.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>Your Name</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/the-boy-and-the-heron.html">
+                        <div class="poster">
+                            <img src="Posters/The Boy And The Heron.jpg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>The Boy and the Heron</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <a href="templates anime/a whisker away.html">
+                        <div class="poster">
+                            <img src="Posters/A Whisker Away.jpeg" alt="">
+                        </div>
+                        </a>
+                        <div class="info">
+                            <h6>A Whisker Away</h6>
+                            <p>Sub | Dub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#content2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#content2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="title1" style = "justify-content: center;">
+            <p style = "font-family:'Courier New', Courier, monospace;">Surprise is Awaiting</p>
+        </div>
+        <div class="title1" style = "justify-content: center;padding-top: 0px; font-size: 19px;color: rgb(116, 116, 116);">
+            <p style = "font-family:'Courier New', Courier, monospace;">Hower through the blank space to discover the best moments from Anime</p>
+        </div>
+       
+
+        <div style = "margin-top: 60px">
+        <main>
+            <div class="list">
+                <div class="cont">
+                    <img src="images/Stone Hashira.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Saitama.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Bleach.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Lufy.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Goku.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Naruto.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Jujitsu Kaisen.jpg" alt="">
+                </div>
+                <div class="cont">
+                    <img src="images/Black Clover.jpg" alt="">
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="footer">
+        <div class="inside_footer" style = "font-family:'Times New Roman', Times, serif;">
+         <h4> Connect:</h4>   
+         <p></p>
+         <p></p>
+         <h5>Uzair Ahmed Shah - Linkedin: <a href = "https://shorturl.at/qjzCx" style = "color:gray">https://shorturl.at/qjzCx</a>&nbsp;&nbsp;&nbsp;, Github: <a href = "https://shorturl.at/bdWOh" style = "color:gray">https://shorturl.at/bdWOh</a>, Gmail: <a href = "msg.uzair@gmail.com" style = "color:gray">msg.uzair@gmail.com</a> </h5>
+         <p></p>
+         <h5>Raman Pandey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - Linkedin: <a href = "https://shorturl.at/dGiZa" style = "color:gray">https://shorturl.at/dGiZa</a>&nbsp;&nbsp;, Github: <a href = "https://shorturl.at/vQ9dz" style = "color:gray">https://shorturl.at/vQ9dz</a>&nbsp;&nbsp;&nbsp;, Gmail: <a href = "ramanpandey976@gmail.com" style = "color:gray">ramanpandey976@gmail.com</a> </h5>
+         <p></p>
+         <h5>Jagadish Patil&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Linkedin: <a href = "https://shorturl.at/asWhD" style = "color:gray">https://shorturl.at/asWhD</a>, Github: <a href = "https://shorturl.at/faiAV" style = "color:gray">https://shorturl.at/faiAV</a>&nbsp;&nbsp;&nbsp;&nbsp;, Gmail: <a href = "msg.uzair@gmail.com" style = "color:gray">msg.uzair@gmail.com</a> </h5>
+    </div>
+    <div class="inside-footer2">
+        <hr>
+        <div style = "padding-top: 30px;padding-left: 0px;">
+            <h5 style = "font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">AURA PICTURES | Aura Anime, LLC</h5>
+        </div>
+        
+    </div>
+    </div>
+
+
+    <script>
+        // Check if the user is logged in by looking at localStorage
+        if (localStorage.getItem('loggedIn') === 'true') {
+            // Change the login button to 'Logged In'
+            document.getElementById('loginStatus').innerText = 'Log Out';
+            // Change the link to a logout page or other page
+            document.getElementById('loginStatus').href = 'logout.html';  // Redirect to logout page
+        }
+    </script>
+
 </body>
 </html>
