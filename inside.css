@@ -524,11 +524,19 @@
 
 #navright .items a, #navright a{
     text-decoration: none; /* Removes underline */
-    color: inherit; /* Inherits color from parent element */
     transition: transform 0.3s ease,
 }
 
 #navright .items:hover {
     color: lightgray; /* Optional: Add hover effect */
     transform: scale(1.1)
+}
+.promo:hover {
+    transform: scale(1.1)
+}
+.promo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body {
+    overflow-x: hidden;
 }
