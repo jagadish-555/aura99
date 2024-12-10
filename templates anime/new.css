@@ -37,12 +37,16 @@ body {
     /* justify-content: center; */
     z-index: 1000;
 }
+#navbar a {
+    text-decoration:none;
+}
 
 #navleft {
     color: white;
     font-size: 2rem;
     margin-left: 20px;
     font-family: Avatar;
+    
 }
 
 /* Main Content */
