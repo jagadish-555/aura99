@@ -1,8 +1,55 @@
+@font-face {
+    font-family: 'Campus'; /* Name of the font */
+    src: url('../Fonts/Campus/campus-personal-use.regular.ttf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Sippin'; /* Name of the font */
+    src: url('../Fonts/mf-sippin-on-sunshine/Sippin\ On\ Sunshine\ -\ OTF.otf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Dyslexic'; /* Name of the font */
+    src: url('../Fonts/Dyslexic/OpenDyslexic-Regular.otf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Sherlock'; /* Name of the font */
+    src: url('../Fonts/sherlock/Sherlock\ Vintage.ttf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'Crack'; /* Name of the font */
+    src: url('../Fonts/icrack/iCrack.ttf') format('opentype'); /* Path to the font file */
+}
+@font-face {
+    font-family: 'hogwarts'; /* Name of the font */
+    src: url('../Fonts/hogwarts/Hogwarts.ttf') format('opentype'); /* Path to the font file */
+}
 *{
     padding: 0px;
     margin: 0px;
-
 }
+
+#navbar a[href="action.html"] {
+    font-family: Campus;
+}
+
+#navbar a[href="romance.html"] {
+    font-family:Sippin;
+}
+
+#navbar a[href="slice.html"] {
+    font-family:Dyslexic;
+}
+
+#navbar a[href="fantasy.html"] {
+    font-family:Sherlock;
+}
+
+#navbar a[href="adventure.html"] {
+    font-family:Crack;
+}
+#navbar a[href="Drama.html"] {
+    font-family:hogwarts;
+}
+
 body,html{
     width: 100vw;
     min-height: 100%;  /* Ensure that the body takes at least the full height of the screen */
