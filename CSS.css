@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Avatar';
+    src: url(Fonts/Avatar_Water.ttf) format('opentype');
+}
+
 *{
     margin: 0px;
     padding: 0px;
